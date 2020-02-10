@@ -6,7 +6,7 @@
           class="page-title text-3xl md:text-center md:text-5xl lg:text-6xl"
           v-html="$page.projects.title"
         ></h1>
-        <div class="text-sm md:text-base text-gray-600 flex justify-center">
+      <!--   <div class="text-sm md:text-base text-gray-600 flex justify-center">
          
           <p class="px-2">—</p>
           <time :datetime="$page.projects.datetime">{{ $page.projects.humanTime }}</time>
@@ -21,9 +21,9 @@
           <figcaption
             class="text-center text-sm italic text-gray-600 mt-4"
           >{{ $page.projects.image_caption }}</figcaption>
-        </figure>
+        </figure> -->
       </div>
-
+<!-- 
       <div class="content post md:px-16">
       
         <p v-html="$page.projects.excerpt"></p>
@@ -39,7 +39,7 @@
             >{{ tag.title}}</g-link>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       
     </section>
