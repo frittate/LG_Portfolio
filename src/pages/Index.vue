@@ -25,9 +25,11 @@
       <p>I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
       <div class="mb-20">
        <table class="min-w-full">
-         <tr v-for="entry in projects" :key="entry.id" class="border-solid border-t-2 border-b-2 border-lu-blue">
-           <g-link :to="entry.node.path" class="text-xl align-middle h-16 table-cell pl-5 text-black hover:translate-x-4">{{entry.node.title}}</g-link>
-         </tr>
+         <tbody>
+           <tr v-for="entry in projects" :key="entry.id" class="border-solid border-t-2 border-b-2 border-lu-blue">
+             <g-link :to="entry.node.path" class="text-xl align-middle h-16 table-cell pl-5 text-black hover:translate-x-4">{{entry.node.title}}</g-link>
+           </tr>
+         </tbody>
        </table>
       </div>
     </section>
@@ -36,9 +38,11 @@
       <p>I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
      <div class="mb-20">
        <table class="min-w-full">
-         <tr v-for="skill in skills" :key="skill.id" class="border-solid border-t-2 border-b-2 border-lu-blue">
-           <p class="text-xl align-middle h-16 table-cell pl-5 text-black">{{skill}}</p>
-         </tr>
+         <tbody>
+           <tr v-for="skill in skills" :key="skill.id" class="border-solid border-t-2 border-b-2 border-lu-blue">
+             <p class="text-xl align-middle h-16 table-cell pl-5 text-black">{{skill}}</p>
+           </tr>
+         </tbody>
        </table>
       </div>
     </section>
