@@ -12,12 +12,12 @@
         </h1>
       </div>
 
-      <div class="px-8 lg:px-0 lg:col-start-9 lg:col-end-12 lg:row-start-1 lg:pt-350 lg:self-end mb-10">
+      <div class="px-8 lg:px-0 lg:col-start-9 lg:col-end-13 lg:row-start-1 lg:pt-350 lg:self-end mb-10">
         <h3>Hey there!</h3>
         <p>I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
       </div>
 
-      <div class="px-8 lg:px-0 lg:col-start-5 lg:col-end-12 lg:row-start-2 lg:my-20 lg:pt-180">
+      <div class="px-8 lg:px-0 lg:col-start-7 lg:col-end-13 lg:row-start-2 lg:my-20 lg:pt-180">
         <h3>Background</h3>
         <p>Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
       </div>
@@ -25,24 +25,30 @@
 
     <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
       <div class="lg:col-start-2 lg:col-end-7">
-      <h2>
-        <span class="red">Projects</span>
-      </h2>
-      <p class="mb-8">I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
-      <table class="min-w-full">
-        <thead></thead>
-        <tbody>
-          <tr v-for="entry in projects" :key="entry.id" class="border-solid border-t-2 border-b-2 border-lu-blue">
-            <td>
-              <g-link :to="entry.node.path" class="text-xl align-middle h-16 table-cell pl-5 text-black hover:translate-x-4">{{entry.node.title}}</g-link>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <h2>
+          <span class="red">Projects</span>
+        </h2>
+        <p class="mb-8">I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
+        <table class="min-w-full">
+          <thead></thead>
+          <tbody>
+            <tr v-for="entry in projects" :key="entry.id" class="border-solid border-t-2 border-b-2 border-lu-blue">
+              <td>
+                <g-link 
+                :to="entry.node.path" 
+                class="flex items-center text-xl h-16 pl-5 text-black"
+                @mouseover.native="projectHover(entry.node.image)">{{entry.node.title}}</g-link>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="hidden lg:block lg:col-start-8 lg:col-end-14 self-center">
+        <g-image :src="projectImage.src" :width="projectImage.width"></g-image>
       </div>
     </section>
     <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
-      <div class="lg:col-start-9 lg:col-end-15">
+      <div class="lg:col-start-9 lg:col-end-14">
         <h3>Skills</h3>
         <p class="mb-8">I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
         <table class="min-w-full">
@@ -58,7 +64,7 @@
       </div>
     </section>
     <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
-      <div class="lg:col-start-2 lg:col-end-8">
+      <div class="lg:col-start-3 lg:col-end-8">
         <h2><span class="yellow">Thoughts</span></h2>
         <p class="mb-8">I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
       </div>
@@ -83,7 +89,7 @@
           <span>a talk</span>
         </h2>
       </div>
-      <div class="px-8 lg:px-0 lg:col-start-9 lg:col-end-14 lg:row-start-1 lg:pt-350">
+      <div class="px-8 lg:px-0 lg:col-start-9 lg:col-end-13 lg:row-start-1 lg:self-end">
         <h3>I’d love to get to know you!</h3>
         <p>I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
       </div>
@@ -132,8 +138,18 @@ export default {
         'Strategic Thinking',
         'Concept Design',
         'Adobe Suite'
-      ]
+      ],
+      projectImage: {
+        src: '',
+        width: null
+      }
     }
+  },
+  beforeMount(){
+    console.log(this.projects[0].node);
+    
+    this.projectImage.src = this.projects[0].node.image.src;
+    this.projectImage.width = this.projects[0].node.image.size.width.toString();
   },
   computed:{
     thoughts(){
@@ -147,6 +163,12 @@ export default {
         return this.$page.allProjects.edges
       }
       return []
+    }
+  },
+  methods: {
+    projectHover(e){
+      this.projectImage.src =  e.src;
+      this.projectImage.size.width =  e.width;
     }
   }
 };
@@ -214,6 +236,7 @@ h2 {
     display: inline;
     padding: 0 6px;
 }
+
 
 
 

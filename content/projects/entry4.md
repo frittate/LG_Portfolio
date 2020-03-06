@@ -1,10 +1,10 @@
 ---
-title: The future of work
+title: Sebastian Martin
 tags: tag1, tag2
 category: Health
 excerpt: Lorem markdownum aptos pes, Inachidos caput corrumpere!
 created: 2019-01-10
-image: ./images/josh-spires-dronenr-sQalFlXIsLs-unsplash.jpg
+image: ./images/sergio-souza-mvb51ThjvRA-unsplash.jpg
 image_caption: Photo by Josh Spires on Unsplash
 author: author1
 ---
