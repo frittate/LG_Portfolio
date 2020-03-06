@@ -1,8 +1,8 @@
 <template>
   <div class="relative">
-        <button
+    <button
       id="mobile-nav-toggle"
-      class="mobile-nav-toggle block absolute h-12 w-full left-0 top-0 flex items-center justify-end font-bold border-none bg-white text-black z-50 focus:outline-none md:hidden"
+      class="mobile-nav-toggle block h-12 flex items-center justify-end font-bold border-none bg-white text-black z-50 focus:outline-none md:hidden"
       :class="toggleNav ? 'menu-toggle-active': ''"
       aria-expanded="false"
       aria-controls="mobile-nav"
@@ -13,7 +13,7 @@
 
     <nav
       id="mobile-nav"
-      class="mobile-nav fixed bg-white text-black left-0 top-0 h-screen w-full overflow-y-auto pt-12 z-20 md:hidden"
+      class="mobile-nav fixed bg-white text-black left-0 top-0 h-screen w-full overflow-hidden pt-12 z-20 md:hidden"
       :class="toggleNav ? 'menu-visible': ''"
     >
       <ul>
@@ -69,6 +69,6 @@ export default {
 
 <style scoped>
 .mobile-nav-label {
-  transform: translateY(80%);
+  /* transform: translateY(80%); */
 }
 </style>

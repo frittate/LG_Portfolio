@@ -14,9 +14,12 @@ module.exports = {
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
-      '6xl': '4rem',
-      '8xl': '5rem',
-      '9xl': '9.375rem'
+      '4rem': '4rem',
+      '5rem': '5rem',
+      '6rem': '6rem',
+      '7rem': '7rem',
+      '8rem': '8rem',
+      '9rem': '9.375rem'
     },
     colors: {
       transparent: 'transparent',
@@ -140,7 +143,22 @@ module.exports = {
         'lu-blue': '#0917AD',
         'lu-yellow': '#EEF60B',
         'lu-red': '#ED116C'
-      }
+      },
+      maxWidth: {
+        'hd': '1920px',
+      },
+      spacing: {
+        '180': '180px',
+        '350': '350px',
+      },
+      gridTemplateColumns: {
+        '14': 'repeat(14, minmax(0, 1fr))',
+      },
+      gridColumnEnd: {
+        '13': '13',
+        '14': '14',
+        '15': '15'
+      },
     }
   }
 }

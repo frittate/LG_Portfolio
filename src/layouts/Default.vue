@@ -1,23 +1,18 @@
 <template>
   <div>
-    <a class="visually-hidden" href="#main">Skip to content</a>
+    <div id="wrapper" class="wrapper md:pb-0 flex flex-col relative min-h-screen overflow-hidden">
 
-    <div id="wrapper" class="wrapper md:pb-0 flex flex-col relative min-h-screen">
+     <!--  <HeaderPartial/> -->
+        <ClientOnly>
+       <!--  <ResponsiveNav/> -->
+        </ClientOnly>
 
-      <HeaderPartial/>
-      
-      <ClientOnly>
-      <ResponsiveNav/>
-      </ClientOnly>
-
-      <main id="main" class="main inner flex flex-1 flex-col px-0 lg:px-20">
-        <slot/>
-      </main>
+        <main id="main" class="main max-w-hd pt-16 lg:pt-0 md:ml-auto md:mr-auto flex flex-1 flex-col px-0">
+          <slot/>
+        </main>
 
       <FooterPartial/>
-        
     </div>
-    
   </div>
 </template>
 
@@ -54,5 +49,11 @@ export default {
 	font-family: 'Bluu';
 	src: url('../assets/fonts/BluuNext-Bold.otf');
 	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Median';
+	src: url('../assets/fonts/MedianGrotesk-Regular.otf');
+	font-weight: 500;
 }
 </style>
