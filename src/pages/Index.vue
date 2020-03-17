@@ -18,6 +18,7 @@
       </div>
 
       <div class="px-8 lg:px-0 lg:col-start-7 lg:col-end-13 lg:row-start-2 lg:my-20 lg:pt-180">
+        <a id="background"></a>
         <h3>Background</h3>
         <p>Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
       </div>
@@ -26,6 +27,7 @@
     <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
       <div class="lg:col-start-2 lg:col-end-7">
         <h2>
+          <a id="projects"></a>
           <span class="red">Projects</span>
         </h2>
         <p class="mb-8">I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
@@ -49,6 +51,7 @@
     </section>
     <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
       <div class="lg:col-start-9 lg:col-end-14">
+        <a id="skills"></a>
         <h3>Skills</h3>
         <p class="mb-8">I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
         <table class="min-w-full">
@@ -65,6 +68,7 @@
     </section>
     <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
       <div class="lg:col-start-3 lg:col-end-8">
+        <a id="thoughts"></a>
         <h2><span class="yellow">Thoughts</span></h2>
         <p class="mb-8">I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
       </div>
@@ -83,13 +87,14 @@
         <g-image src="~/assets/img/lg_portrait_2.jpg" alt="" />
       </div>
       <div class="px-8 lg:px-0 lg:col-start-6 lg:col-end-10 lg:row-start-1 lg:self-center">
+        <a id="talk"></a>
         <h2 class="transform -translate-y-16 lg:translate-y-0 fake-h1 text-6rem md:text-7rem lg:text-9rem">
           <span>Let's</span> <br>
           <span>have</span><br>
           <span>a talk</span>
         </h2>
       </div>
-      <div class="px-8 lg:px-0 lg:col-start-9 lg:col-end-13 lg:row-start-1 lg:self-end">
+      <div class="px-8 lg:px-10 lg:col-start-9 lg:col-end-13 lg:row-start-2 lg:self-end">
         <h3>I’d love to get to know you!</h3>
         <p>I’m using Whatsapp. I’m in love with design, but what I love even more is concepts that give back to the people. I’m very aware of the connection between design and manipulation. Hi, my name is Luisa. I’m in love with design, but what I love even more is concepts that give back to the people.</p>
       </div>

@@ -1,4 +1,4 @@
-import plugin_gridsome_plugin_tailwindcss_5 from "F:\\programming\\webdev\\LG_Portfolio\\node_modules\\gridsome-plugin-tailwindcss\\gridsome.client.js"
+import plugin_gridsome_plugin_tailwindcss_5 from "C:\\webdev\\2020-luisa-portfolio\\node_modules\\gridsome-plugin-tailwindcss\\gridsome.client.js"
 
 export default [
   {

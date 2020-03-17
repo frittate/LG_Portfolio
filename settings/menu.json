@@ -1,20 +1,24 @@
 {
   "menu": [
     {
-      "name": "Home",
-      "link": "/"
+      "name": "Background",
+      "link": "/#background"
     },
     {
-      "name": "About",
-      "link": "/about"
+      "name": "Projects",
+      "link": "/#projects"
     },
     {
-      "name": "Blog",
-      "link": "/blog"
+      "name": "Skills",
+      "link": "/#skills"
     },
     {
-      "name": "Contact",
-      "link": "/contact"
+      "name": "Thoughts",
+      "link": "/#thoughts"
+    },
+    {
+      "name": "Let's talk",
+      "link": "/#talk"
     }
   ]
 }

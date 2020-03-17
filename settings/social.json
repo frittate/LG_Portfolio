@@ -1,14 +1,17 @@
 {
   "social": [
     {
+      "name": "Facebook",
       "icon": "facebook",
       "link": "https://www.facebook.com"
     },
     {
+      "name": "Tweeeter",
       "icon": "twitter",
       "link": "https://twitter.com/joe_dyer1"
     },
     {
+      "name": "InkedIn",
       "icon": "linkedin",
       "link": "https://www.linkedin.com"
     }
