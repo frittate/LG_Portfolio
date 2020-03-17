@@ -19,8 +19,8 @@
       <ul class="pb-20">
         <li
           class="level-1 mb-4"
-          v-for="entry in projects"
-          :key="entry.node.name"
+          v-for="entry in querystatic.projects.edges"
+          :key="entry.id"
         >
           <g-link
             :to="entry.node.path"
@@ -49,9 +49,9 @@
   </div>
 </template>
 
-<page-query>
+<static-query>
 query {
-  allProjects {
+  projects: allProjects {
     edges {
       node {
         title
@@ -59,13 +59,7 @@ query {
       }
     }
   }
-}
-</page-query>
-
-<static-query>
-query {
   metadata {
-    siteName
     social {
       name
       link
@@ -79,16 +73,15 @@ let myBody = {
   classList : {}
 };
 export default {
-
   data() {
     return {
-      toggleNav: false
+      toggleNav: false,
     }
   },
   computed: {
-     projects(){
-       if (this.$page.allProjects.edges.length) {
-        return this.$page.allProjects.edges
+    querystatic(){
+      if (this.$static != undefined) {
+        return this.$static
       }
       return []
     }
