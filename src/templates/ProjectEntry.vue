@@ -1,47 +1,21 @@
 <template>
   <Layout>
-    <section id="container-centre" class="column centre flex-1">
-      <div class="post-header mb-12 md:mb-20">
-        <h1
-          class="page-title text-3xl md:text-center md:text-5xl lg:text-6xl"
-          v-html="$page.projects.title"
-        ></h1>
-      <!--   <div class="text-sm md:text-base text-gray-600 flex justify-center">
-         
-          <p class="px-2">—</p>
-          <time :datetime="$page.projects.datetime">{{ $page.projects.humanTime }}</time>
-          <p class="px-2">—</p>
-          <p class="category">
-            Posted in
-            <g-link :to="$page.projects.category.path">{{ $page.projects.category.title }}</g-link>
-          </p>
-        </div>
-        <figure class="mt-10 md:mt-20">
-          <g-image :alt="$page.projects.image_caption" :src="$page.projects.image" />
-          <figcaption
-            class="text-center text-sm italic text-gray-600 mt-4"
-          >{{ $page.projects.image_caption }}</figcaption>
-        </figure> -->
+    <section id="container-centre" class="lg:grid lg:grid-cols-14 lg:gap-1 lg:grid-rows-auto lg:pt-20">
+      <div class="lg:col-start-1 lg:col-end-8 lg:row-start-1">
+        <g-image :src="con.image" :alt="con.image_caption" width="952" />
       </div>
-<!-- 
-      <div class="content post md:px-16">
-      
-        <p v-html="$page.projects.excerpt"></p>
+      <div class="px-8 lg:px-0 lg:col-start-9 lg:col-end-14 lg:row-start-1 lg:pt-8">
+        <h1 class="page-title transform -translate-y-16 lg:translate-y-0 md:text-6rem lg:text-7rem">
+          <span v-html="con.title"></span>
+        </h1>
+      </div>
 
-        <div v-html="$page.projects.content"></div>
-
-        <ul class="flex pt-8 border-t border-gray-100">
-          <li class="mr-2" v-for="tag in $page.projects.tags" :key="tag.id">
-            <g-link
-              :to="tag.path"
-              class="inline-block border border-pink-300 px-4 py-2 text-pink-500 text-xs font-semibold rounded hover:text-white hover:bg-pink-500 hover:border-pink-500"
-              
-            >{{ tag.title}}</g-link>
-          </li>
-        </ul>
-      </div> -->
-
-      
+       <div class="px-8 lg:px-0 lg:col-start-9 lg:col-end-13 lg:row-start-1 lg:pt-350 lg:self-end mb-10">
+        <h3>Test</h3>
+        <p>{{con.excerpt}}</p>
+      </div>
+    </section>
+    <section id="page-content" class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:gap-1 lg:grid-rows-auto pt-130" v-html="con.content">
     </section>
   </Layout>
 </template>
@@ -68,6 +42,27 @@ export default {
     return {
       title: this.$page.projects.title
     };
+  },
+  computed: {
+    con(){
+      return this.$page.projects
+    }
+  },
+  mounted(){
+    console.log('...');
+    
   }
 };
 </script>
+
+<style lang="scss">
+#page-content h2 {
+  font-family: 'Bluu';
+  font-weight: 700;
+  background-position: 0 0.8em;
+  background-repeat: repeat-x;
+  background-size: 2px 14px;
+  background-image: linear-gradient(to bottom, #0917AD 0%, #0917AD 100%);
+}
+
+</style>

@@ -2,9 +2,10 @@ a {
     @apply no-underline text-pink-500;
     transition: 0.25s all ease-out;
 
-    &:hover {
-        @apply text-purple-900;
-    }
+   /*  &:hover {
+        background-position: 0 0;
+        background-size: 2px 24px;
+    } */
 }
 
 /* don't hide from screen readers */

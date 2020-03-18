@@ -142,12 +142,14 @@ module.exports = {
       colors: {
         'lu-blue': '#0917AD',
         'lu-yellow': '#EEF60B',
-        'lu-red': '#ED116C'
+        'lu-red': '#ED116C',
+        'lu-grey': '#D6D6D6'
       },
       maxWidth: {
         'hd': '1920px',
       },
       spacing: {
+        '130': '130px',
         '180': '180px',
         '350': '350px',
       },
@@ -159,6 +161,12 @@ module.exports = {
         '14': '14',
         '15': '15'
       },
+      zIndex: {
+       '-10': '-10',
+      }
     }
+  },
+  variants: {
+    borderWidth: ['responsive', 'odd', 'even', 'first', 'hover', 'focus'],
   }
 }

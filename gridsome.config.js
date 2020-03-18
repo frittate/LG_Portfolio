@@ -1,6 +1,9 @@
+// const grayMatter = require('gray-matter')
 module.exports = {
   siteName: 'Gridsome',
+  remark: {
 
+  },
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss',
@@ -32,9 +35,17 @@ module.exports = {
       options: {
         typeName: 'Projects',
         path: './content/projects/**/*.md',
+        remark: {
+          // remark options
+        }
       }
     },
   ],
+  transformers: {
+    remark: {
+      slug: false,
+    }
+  },
   templates: {
     Thoughts: [{
       path: '/thoughts/:title',

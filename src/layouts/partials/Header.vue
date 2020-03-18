@@ -7,13 +7,13 @@
       <nav id="nav" class="nav lg:flex transform -translate-y-4 -rotate-90 origin-top-left">
         <ul class="menu flex flex-col lg:flex-row items-center list-reset text-base">
           <li
-            class="level-1 mb-4 md:mr-4 md:mb-0"
-            v-for="element in $static.metadata.menu"
+            class="level-1 mb-4 md:mr-10 md:mb-0"
+            v-for="element in menu"
             :key="element.name"
           >
             <g-link
               :to="element.link"
-              class="link text-black hover:underline"
+              class="link text-black text-2xl"
               active-class="is-active-link"
               exact-active-class="active text-grey-700"
             >{{ element.name }}</g-link>
@@ -27,7 +27,7 @@
           :key="element.name">
              <g-link
               :to="element.link"
-              class="link text-black hover:underline"
+              class="link text-black text-2xl"
               active-class="is-active-link"
               exact-active-class="active text-grey-700"
             >{{ element.name }}</g-link>
@@ -44,6 +44,11 @@ import ResponsiveNav from './ResponsiveNav';
 export default {
   components: {
     ResponsiveNav
+  },
+  computed: {
+    menu(){
+      return this.$static.metadata.menu.reverse()
+    }
   },
   methods: {
     socialIcon(element) {

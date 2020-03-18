@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <section id="container-centre" class="lg:grid lg:grid-cols-14 lg:grid-rows-auto lg:pt-20">
+    <section id="container-centre" class="lg:grid lg:grid-cols-14 lg:gap-1 lg:grid-rows-auto lg:pt-20">
       <div class="lg:col-start-1 lg:col-end-8 lg:row-start-1">
         <g-image src="~/assets/img/lg_portrait_1.jpg" alt="Luisa Goellner Portrait" width="952" />
       </div>
@@ -24,8 +24,9 @@
       </div>
     </section>
 
-    <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
-      <div class="lg:col-start-2 lg:col-end-7">
+   
+      <project-module :projects="projects"/>
+<!--       <div class="lg:col-start-2 lg:col-end-7">
         <h2>
           <a id="projects"></a>
           <span class="red">Projects</span>
@@ -39,17 +40,18 @@
                 <g-link 
                 :to="entry.node.path" 
                 class="flex items-center text-xl h-16 pl-5 text-black"
-                @mouseover.native="projectHover(entry.node.image)">{{entry.node.title}}</g-link>
+                @mouseover.native="projectHover(entry.node.image)"
+                @mouseleave.native="projectReset()">{{entry.node.title}}</g-link>
               </td>
             </tr>
           </tbody>
         </table>
       </div>
-      <div class="hidden lg:block lg:col-start-8 lg:col-end-14 self-center">
+      <div class="hidden lg:block lg:col-start-8 lg:col-end-14 self-center overflow-hidden">
         <g-image :src="projectImage.src" :width="projectImage.width"></g-image>
-      </div>
-    </section>
-    <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
+      </div> -->
+   
+    <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:gap-1 lg:grid-rows-auto pt-180">
       <div class="lg:col-start-9 lg:col-end-14">
         <a id="skills"></a>
         <h3>Skills</h3>
@@ -66,7 +68,7 @@
         </table>
       </div>
     </section>
-    <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180">
+    <section class="px-8 lg:px-0 lg:grid lg:grid-cols-14 lg:gap-1 lg:grid-rows-auto pt-180">
       <div class="lg:col-start-3 lg:col-end-8">
         <a id="thoughts"></a>
         <h2><span class="yellow">Thoughts</span></h2>
@@ -82,7 +84,7 @@
        </ul>
       </div>
     </section>
-    <section class="lg:grid lg:grid-cols-14 lg:grid-rows-auto pt-180 mb-180">
+    <section class="lg:grid lg:grid-cols-14 lg:gap-1 lg:grid-rows-auto pt-180 mb-180">
       <div class="lg:col-start-1 lg:col-end-8 lg:row-start-1">
         <g-image src="~/assets/img/lg_portrait_2.jpg" alt="" />
       </div>
@@ -132,9 +134,13 @@
 </page-query>
 
 <script>
+import ProjectModule from '../components/ProjectModule'
 export default {
   metaInfo: {
     title: "Home"
+  },
+  components: {
+    ProjectModule
   },
   data(){
     return {
@@ -150,13 +156,8 @@ export default {
       }
     }
   },
-  beforeMount(){
-    console.log(this.projects[0].node);
-    
-    this.projectImage.src = this.projects[0].node.image.src;
-    this.projectImage.width = this.projects[0].node.image.size.width.toString();
-  },
   computed:{
+
     thoughts(){
       if (this.$page.allThoughts.edges.length) {
         return this.$page.allThoughts.edges
@@ -170,77 +171,20 @@ export default {
       return []
     }
   },
-  methods: {
+ /*  methods: {
     projectHover(e){
       this.projectImage.src =  e.src;
       this.projectImage.size.width =  e.width;
-    }
-  }
+    },
+    projectReset(){
+      this.projectImage.src = "";
+    },
+  } */
 };
 </script>
 
 <style lang="scss">
-body {
-  font-family: 'Median'
-}
 
-.page-title, h2.fake-h1 {
-  @apply leading-none;
-  font-family: 'Bluu';
-  font-weight: 700;
-
-  & > span {
-    background-image: linear-gradient(to bottom, #EEF60B 0%, #EEF60B 100%);
-    background-position: 0 0.85em;
-    background-repeat: repeat-x;
-    background-size: 2px 32px;
-    display: inline;
-    /* padding-left: 14px; */
-  }
-}
-
-.page-title-wrapper {
-  /* transform: translateY(-55px); */
-}
-
-p {
-  @apply tracking-wide leading-tight;
-}
-
-h3 {
-  @apply text-3xl leading-tight uppercase mb-4 tracking-wider font-medium;
-}
-
-h2 {
-  @apply text-5xl mb-8;
-  font-family: 'Bluu';
-  font-weight: 700;
-
-  & > span {
-    background-position: 0 0.8em;
-    background-repeat: repeat-x;
-    background-size: 2px 14px;
-    display: inline;
-    padding-left: 14px;
-  }
-
-  & > span.yellow {
-    background-image: linear-gradient(to bottom, #EEF60B 0%, #EEF60B 100%);
-  }
-
-  & > span.red {
-    background-image: linear-gradient(to bottom, #ED116C 0%, #ED116C 100%);
-  }
-}
-
-.read-on-link {
-    background-image: linear-gradient(to bottom, #ED116C 0%, #ED116C 100%);
-    background-position: 0 0.8em;
-    background-repeat: repeat-x;
-    background-size: 2px 12px;
-    display: inline;
-    padding: 0 6px;
-}
 
 
 
